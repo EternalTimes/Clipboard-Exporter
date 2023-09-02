@@ -59,6 +59,7 @@
             // 
             resources.ApplyResources(textBox1, "textBox1");
             textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
             // Clipboard_Exporter
