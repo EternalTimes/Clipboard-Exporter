@@ -31,12 +31,36 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clipboard_Exporter));
             timer1 = new System.Windows.Forms.Timer(components);
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
             SuspendLayout();
+            // 
+            // button1
+            // 
+            resources.ApplyResources(button1, "button1");
+            button1.Name = "button1";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            resources.ApplyResources(button2, "button2");
+            button2.Name = "button2";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            resources.ApplyResources(button3, "button3");
+            button3.Name = "button3";
+            button3.UseVisualStyleBackColor = true;
             // 
             // Clipboard_Exporter
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Name = "Clipboard_Exporter";
             ResumeLayout(false);
         }
@@ -44,5 +68,8 @@
         #endregion
 
         private System.Windows.Forms.Timer timer1;
+        private Button button1;
+        private Button button2;
+        private Button button3;
     }
 }
