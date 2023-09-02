@@ -16,5 +16,10 @@ namespace Clipboard_Exporter
         {
             InitializeComponent();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -34,6 +34,7 @@
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
+            textBox1 = new TextBox();
             SuspendLayout();
             // 
             // button1
@@ -54,15 +55,23 @@
             button3.Name = "button3";
             button3.UseVisualStyleBackColor = true;
             // 
+            // textBox1
+            // 
+            resources.ApplyResources(textBox1, "textBox1");
+            textBox1.Name = "textBox1";
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
             // Clipboard_Exporter
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(textBox1);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
             Name = "Clipboard_Exporter";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -71,5 +80,6 @@
         private Button button1;
         private Button button2;
         private Button button3;
+        private TextBox textBox1;
     }
 }
