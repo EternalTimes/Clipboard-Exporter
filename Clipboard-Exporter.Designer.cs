@@ -31,34 +31,37 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clipboard_Exporter));
             timer1 = new System.Windows.Forms.Timer(components);
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            copyButton = new Button();
+            clearButton = new Button();
+            saveToFileButton = new Button();
             textBox1 = new TextBox();
             SuspendLayout();
             // 
-            // button1
+            // copyButton
             // 
-            resources.ApplyResources(button1, "button1");
-            button1.Name = "button1";
-            button1.UseVisualStyleBackColor = true;
+            resources.ApplyResources(copyButton, "copyButton");
+            copyButton.AccessibleRole = AccessibleRole.OutlineButton;
+            copyButton.Name = "copyButton";
+            copyButton.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // clearButton
             // 
-            resources.ApplyResources(button2, "button2");
-            button2.Name = "button2";
-            button2.UseVisualStyleBackColor = true;
+            resources.ApplyResources(clearButton, "clearButton");
+            clearButton.ForeColor = SystemColors.ControlText;
+            clearButton.Name = "clearButton";
+            clearButton.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // saveToFileButton
             // 
-            resources.ApplyResources(button3, "button3");
-            button3.Name = "button3";
-            button3.UseVisualStyleBackColor = true;
+            resources.ApplyResources(saveToFileButton, "saveToFileButton");
+            saveToFileButton.Name = "saveToFileButton";
+            saveToFileButton.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
             resources.ApplyResources(textBox1, "textBox1");
             textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
             // Clipboard_Exporter
@@ -66,9 +69,9 @@
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(textBox1);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(saveToFileButton);
+            Controls.Add(clearButton);
+            Controls.Add(copyButton);
             Name = "Clipboard_Exporter";
             ResumeLayout(false);
             PerformLayout();
@@ -77,9 +80,9 @@
         #endregion
 
         private System.Windows.Forms.Timer timer1;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button copyButton;
+        private Button clearButton;
+        private Button saveToFileButton;
         private TextBox textBox1;
     }
 }
