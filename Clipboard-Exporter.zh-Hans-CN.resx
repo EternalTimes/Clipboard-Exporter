@@ -118,15 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="copyButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>100, 390</value>
-  </data>
   <data name="copyButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>120, 40</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="copyButton.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
   </data>
   <data name="copyButton.Text" xml:space="preserve">
     <value>Copy</value>
@@ -135,14 +128,8 @@
   <data name="clearButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="clearButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>320, 390</value>
-  </data>
   <data name="clearButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>120, 40</value>
-  </data>
-  <data name="clearButton.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
   </data>
   <data name="clearButton.Text" xml:space="preserve">
     <value>Clear</value>
@@ -150,28 +137,29 @@
   <data name="saveToFileButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="saveToFileButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>540, 390</value>
-  </data>
   <data name="saveToFileButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>120, 40</value>
-  </data>
-  <data name="saveToFileButton.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
   </data>
   <data name="saveToFileButton.Text" xml:space="preserve">
     <value>Save</value>
   </data>
-  <data name="textBox1.MaximumSize" type="System.Drawing.Size, System.Drawing">
+  <data name="clipboardHistoryTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 30</value>
+  </data>
+  <data name="clipboardHistoryTextBox.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>700, 300</value>
   </data>
-  <data name="textBox1.MinimumSize" type="System.Drawing.Size, System.Drawing">
+  <data name="clipboardHistoryTextBox.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>700, 300</value>
   </data>
-  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="clipboardHistoryTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>700, 300</value>
   </data>
-  <data name="textBox1.WordWrap" type="System.Boolean, mscorlib">
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="clipboardHistoryTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="clipboardHistoryTextBox.WordWrap" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">

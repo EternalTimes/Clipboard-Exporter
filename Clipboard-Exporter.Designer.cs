@@ -30,12 +30,16 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clipboard_Exporter));
-            timer1 = new System.Windows.Forms.Timer(components);
+            clipboardMonitorTimer = new System.Windows.Forms.Timer(components);
             copyButton = new Button();
             clearButton = new Button();
             saveToFileButton = new Button();
-            textBox1 = new TextBox();
+            clipboardHistoryTextBox = new TextBox();
             SuspendLayout();
+            // 
+            // clipboardMonitorTimer
+            // 
+            clipboardMonitorTimer.Tick += clipboardMonitorTimer_Tick;
             // 
             // copyButton
             // 
@@ -43,6 +47,7 @@
             copyButton.AccessibleRole = AccessibleRole.OutlineButton;
             copyButton.Name = "copyButton";
             copyButton.UseVisualStyleBackColor = true;
+            copyButton.Click += copyButton_Click;
             // 
             // clearButton
             // 
@@ -50,25 +55,27 @@
             clearButton.ForeColor = SystemColors.ControlText;
             clearButton.Name = "clearButton";
             clearButton.UseVisualStyleBackColor = true;
+            clearButton.Click += clearButton_Click;
             // 
             // saveToFileButton
             // 
             resources.ApplyResources(saveToFileButton, "saveToFileButton");
             saveToFileButton.Name = "saveToFileButton";
             saveToFileButton.UseVisualStyleBackColor = true;
+            saveToFileButton.Click += saveToFileButton_Click;
             // 
-            // textBox1
+            // clipboardHistoryTextBox
             // 
-            resources.ApplyResources(textBox1, "textBox1");
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.TextChanged += textBox1_TextChanged;
+            resources.ApplyResources(clipboardHistoryTextBox, "clipboardHistoryTextBox");
+            clipboardHistoryTextBox.Name = "clipboardHistoryTextBox";
+            clipboardHistoryTextBox.ReadOnly = true;
+            clipboardHistoryTextBox.TextChanged += textBox1_TextChanged;
             // 
             // Clipboard_Exporter
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(textBox1);
+            Controls.Add(clipboardHistoryTextBox);
             Controls.Add(saveToFileButton);
             Controls.Add(clearButton);
             Controls.Add(copyButton);
@@ -79,10 +86,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer clipboardMonitorTimer;
         private Button copyButton;
         private Button clearButton;
         private Button saveToFileButton;
-        private TextBox textBox1;
+        private TextBox clipboardHistoryTextBox;
     }
 }
