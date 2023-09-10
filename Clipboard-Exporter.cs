@@ -5,10 +5,10 @@ namespace Clipboard_Exporter
 
     public partial class Clipboard_Exporter : Form
     {
+        private string lastClipboardText = ""; // 用于存储上一次的剪贴板内容
+        private int consecutiveCopies = 0; // 连续复制相同内容的次数
         private List<string> clipboardHistory = new List<string>();
-
         private bool isListening = false;
-
         private SaveFileDialog saveFileDialog;
 
         public Clipboard_Exporter()
@@ -67,6 +67,8 @@ namespace Clipboard_Exporter
         {
             if (enable)
             {
+                clipboardHistory.Clear(); // 清空剪贴板历史记录
+                UpdateClipboardHistoryTextBox();
                 clipboardMonitorTimer.Start();
                 startStopButton.Text = "停止监听";
             }
@@ -82,11 +84,19 @@ namespace Clipboard_Exporter
             if (Clipboard.ContainsText())
             {
                 string clipboardText = Clipboard.GetText();
-                if (!string.IsNullOrWhiteSpace(clipboardText) && !clipboardHistory.Contains(clipboardText))
+
+                if (!string.IsNullOrWhiteSpace(clipboardText) && clipboardText != lastClipboardText)
                 {
                     clipboardHistory.Insert(0, clipboardText);
                     UpdateClipboardHistoryTextBox();
+                    consecutiveCopies = 0;
                 }
+                else if (clipboardText == lastClipboardText)
+                {
+                    consecutiveCopies++;
+                }
+
+                lastClipboardText = clipboardText;
             }
         }
     }
