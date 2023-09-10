@@ -30,32 +30,32 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clipboard_Exporter));
-            clipboardMonitorTimer = new System.Windows.Forms.Timer(components);
-            copyButton = new Button();
-            clearButton = new Button();
-            saveToFileButton = new Button();
             clipboardHistoryTextBox = new TextBox();
+            clearButton = new Button();
+            copyButton = new Button();
+            saveToFileButton = new Button();
+            clipboardMonitorTimer = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
-            // clipboardMonitorTimer
+            // clipboardHistoryTextBox
             // 
-            clipboardMonitorTimer.Tick += clipboardMonitorTimer_Tick;
-            // 
-            // copyButton
-            // 
-            resources.ApplyResources(copyButton, "copyButton");
-            copyButton.AccessibleRole = AccessibleRole.OutlineButton;
-            copyButton.Name = "copyButton";
-            copyButton.UseVisualStyleBackColor = true;
-            copyButton.Click += copyButton_Click;
+            resources.ApplyResources(clipboardHistoryTextBox, "clipboardHistoryTextBox");
+            clipboardHistoryTextBox.Name = "clipboardHistoryTextBox";
+            clipboardHistoryTextBox.ReadOnly = true;
             // 
             // clearButton
             // 
             resources.ApplyResources(clearButton, "clearButton");
-            clearButton.ForeColor = SystemColors.ControlText;
             clearButton.Name = "clearButton";
             clearButton.UseVisualStyleBackColor = true;
             clearButton.Click += clearButton_Click;
+            // 
+            // copyButton
+            // 
+            resources.ApplyResources(copyButton, "copyButton");
+            copyButton.Name = "copyButton";
+            copyButton.UseVisualStyleBackColor = true;
+            copyButton.Click += copyButton_Click;
             // 
             // saveToFileButton
             // 
@@ -64,22 +64,20 @@
             saveToFileButton.UseVisualStyleBackColor = true;
             saveToFileButton.Click += saveToFileButton_Click;
             // 
-            // clipboardHistoryTextBox
+            // clipboardMonitorTimer
             // 
-            resources.ApplyResources(clipboardHistoryTextBox, "clipboardHistoryTextBox");
-            clipboardHistoryTextBox.Name = "clipboardHistoryTextBox";
-            clipboardHistoryTextBox.ReadOnly = true;
-            
+            clipboardMonitorTimer.Tick += clipboardMonitorTimer_Tick;
             // 
             // Clipboard_Exporter
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(clipboardHistoryTextBox);
             Controls.Add(saveToFileButton);
-            Controls.Add(clearButton);
             Controls.Add(copyButton);
+            Controls.Add(clearButton);
+            Controls.Add(clipboardHistoryTextBox);
             Name = "Clipboard_Exporter";
+            Load += Clipboard_Exporter_Load;
             ResumeLayout(false);
             PerformLayout();
         }

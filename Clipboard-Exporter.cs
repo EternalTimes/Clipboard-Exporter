@@ -11,6 +11,7 @@ using System.IO;
 
 namespace Clipboard_Exporter
 {
+
     public partial class Clipboard_Exporter : Form
     {
         private List<string> clipboardHistory = new List<string>();
