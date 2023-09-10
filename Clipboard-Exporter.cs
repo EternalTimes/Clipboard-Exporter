@@ -1,4 +1,6 @@
-﻿namespace Clipboard_Exporter
+﻿using System.Windows.Forms;
+
+namespace Clipboard_Exporter
 {
 
     public partial class Clipboard_Exporter : Form
@@ -7,12 +9,17 @@
 
         private bool isListening = false;
 
+        private SaveFileDialog saveFileDialog;
 
         public Clipboard_Exporter()
         {
             InitializeComponent();
             ///this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None; // 设置DPI缩放适配
             ///this.AutoScroll = true; // 启用自动滚动以适应小屏幕
+            saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Text Files|*.txt|All Files|*.*";
+            saveFileDialog.DefaultExt = "txt";
+            saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
         }
 
         private void Clipboard_Exporter_Load(object sender, EventArgs e)
@@ -42,13 +49,11 @@
 
         private void saveToFileButton_Click(object sender, EventArgs e)
         {
-            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            saveFileDialog.FileName = DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss-fff") + ".txt";
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                saveFileDialog.Filter = "Text Files|*.txt|All Files|*.*";
-                if (saveFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    File.WriteAllLines(saveFileDialog.FileName, clipboardHistory);
-                }
+                File.WriteAllLines(saveFileDialog.FileName, clipboardHistory);
             }
         }
 
