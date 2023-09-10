@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             this.ClientSize = new Size(1020, 500);
             this.Size = new Size(1020, 500);
+            this.Font = new System.Drawing.Font("霞鹜YO", 14, System.Drawing.FontStyle.Regular, ((byte)(0)));
             /// this.AutoScaleMode = AutoScaleMode.None;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clipboard_Exporter));
             clipboardHistoryTextBox = new TextBox();
