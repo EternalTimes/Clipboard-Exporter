@@ -45,8 +45,8 @@ namespace Clipboard_Exporter
         {
             clipboardHistory.Clear();
             UpdateClipboardHistoryTextBox();
-            ///lastClipboardText = ""; // 重置上一次的剪贴板内容
-            consecutiveCopies = 0; // 重置连续复制次数
+            lastClipboardText = "";
+            consecutiveCopies = 0;
         }
 
         private void saveToFileButton_Click(object sender, EventArgs e)
@@ -81,28 +81,19 @@ namespace Clipboard_Exporter
             }
         }
 
-        ///private string lastClipboardText = ""; // 上一次的剪贴板内容
-
         private void clipboardMonitorTimer_Tick(object sender, EventArgs e)
         {
             string clipboardText = Clipboard.GetText();
 
-            if (!string.IsNullOrWhiteSpace(clipboardText))
+            if (isListening && !string.IsNullOrWhiteSpace(clipboardText) && clipboardText != lastClipboardText)
             {
-                if (lastClipboardText != clipboardText)
-                {
-                    clipboardHistory.Insert(0, clipboardText);
-                    UpdateClipboardHistoryTextBox();
-                }
-                else
-                {
-                    // 多次复制相同内容，都记录下来
-                    clipboardHistory.Insert(0, clipboardText);
-                    UpdateClipboardHistoryTextBox();
-                }
+                clipboardHistory.Insert(0, clipboardText);
+                UpdateClipboardHistoryTextBox();
 
-                lastClipboardText = clipboardText;
+                Clipboard.Clear();// 复制后清除系统剪贴板，但不清除应用程序的剪贴板历史记录
             }
+
+            lastClipboardText = clipboardText;
         }
     }
 }
