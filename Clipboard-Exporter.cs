@@ -1,15 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.IO;
-
-namespace Clipboard_Exporter
+﻿namespace Clipboard_Exporter
 {
 
     public partial class Clipboard_Exporter : Form
@@ -22,8 +11,8 @@ namespace Clipboard_Exporter
         public Clipboard_Exporter()
         {
             InitializeComponent();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi; // 设置DPI缩放适配
-            this.AutoScroll = true; // 启用自动滚动以适应小屏幕
+            ///this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None; // 设置DPI缩放适配
+            ///this.AutoScroll = true; // 启用自动滚动以适应小屏幕
         }
 
         private void Clipboard_Exporter_Load(object sender, EventArgs e)

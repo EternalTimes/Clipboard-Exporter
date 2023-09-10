@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            this.ClientSize = new Size(1020, 500);
+            this.Size = new Size(1020, 500);
+            /// this.AutoScaleMode = AutoScaleMode.None;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clipboard_Exporter));
             clipboardHistoryTextBox = new TextBox();
             clearButton = new Button();
@@ -43,6 +46,10 @@
             resources.ApplyResources(clipboardHistoryTextBox, "clipboardHistoryTextBox");
             clipboardHistoryTextBox.Name = "clipboardHistoryTextBox";
             clipboardHistoryTextBox.ReadOnly = true;
+            clipboardHistoryTextBox.Size = new System.Drawing.Size(860, 350);
+            clipboardHistoryTextBox.Location = new System.Drawing.Point(0, 0);
+            clipboardHistoryTextBox.Multiline = true;
+            clipboardHistoryTextBox.ScrollBars = ScrollBars.Both;
             // 
             // clearButton
             // 
@@ -50,6 +57,9 @@
             clearButton.Name = "clearButton";
             clearButton.UseVisualStyleBackColor = true;
             clearButton.Click += clearButton_Click;
+            clearButton.Size = new System.Drawing.Size(140, 30);
+            clearButton.Location = new System.Drawing.Point(50, 385);
+            clearButton.Text = "清空";
             // 
             // copyButton
             // 
@@ -57,6 +67,9 @@
             copyButton.Name = "copyButton";
             copyButton.UseVisualStyleBackColor = true;
             copyButton.Click += copyButton_Click;
+            copyButton.Size = new System.Drawing.Size(140, 30);
+            copyButton.Location = new System.Drawing.Point(240, 385);
+            copyButton.Text = "复制";
             // 
             // saveToFileButton
             // 
@@ -64,6 +77,9 @@
             saveToFileButton.Name = "saveToFileButton";
             saveToFileButton.UseVisualStyleBackColor = true;
             saveToFileButton.Click += saveToFileButton_Click;
+            saveToFileButton.Size = new System.Drawing.Size(140, 30);
+            saveToFileButton.Location = new System.Drawing.Point(430, 385);
+            saveToFileButton.Text = "保存";
             // 
             // startStopButton
             // 
@@ -71,6 +87,9 @@
             startStopButton.Name = "startStopButton";
             startStopButton.UseVisualStyleBackColor = true;
             startStopButton.Click += startStopButton_Click;
+            startStopButton.Size = new System.Drawing.Size(140, 30);
+            startStopButton.Location = new System.Drawing.Point(620, 385);
+            startStopButton.Text = "开启监听";
             // 
             // clipboardMonitorTimer
             // 
@@ -80,7 +99,7 @@
             // Clipboard_Exporter
             // 
             resources.ApplyResources(this, "$this");
-            AutoScaleMode = AutoScaleMode.Dpi;
+            ///AutoScaleMode = AutoScaleMode.None;
             Controls.Add(clipboardHistoryTextBox);
             Controls.Add(clearButton);
             Controls.Add(copyButton);
@@ -94,10 +113,10 @@
         #endregion
 
         private System.Windows.Forms.Timer clipboardMonitorTimer;
-        private Button copyButton;
-        private Button clearButton;
-        private Button saveToFileButton;
-        private Button startStopButton;
         private TextBox clipboardHistoryTextBox;
+        public Button startStopButton;
+        public Button copyButton;
+        public Button saveToFileButton;
+        public Button clearButton;
     }
 }

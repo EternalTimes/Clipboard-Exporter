@@ -123,7 +123,7 @@
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="clipboardHistoryTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>40, 18, 40, 18</value>
+    <value>533, 108, 533, 108</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="clipboardHistoryTextBox.Multiline" type="System.Boolean, mscorlib">
@@ -134,7 +134,7 @@
     <value>Vertical</value>
   </data>
   <data name="clipboardHistoryTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 30</value>
+    <value>11417, 2380</value>
   </data>
   <data name="clipboardHistoryTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -143,13 +143,13 @@
     <value>True</value>
   </data>
   <data name="clearButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 440</value>
+    <value>667, 2640</value>
   </data>
   <data name="clearButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>40, 18, 40, 18</value>
+    <value>533, 108, 533, 108</value>
   </data>
   <data name="clearButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 30</value>
+    <value>1867, 180</value>
   </data>
   <data name="clearButton.Text" xml:space="preserve">
     <value>清空</value>
@@ -158,13 +158,13 @@
     <value>True</value>
   </data>
   <data name="copyButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>250, 440</value>
+    <value>3333, 2640</value>
   </data>
   <data name="copyButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>40, 18, 40, 18</value>
+    <value>533, 108, 533, 108</value>
   </data>
   <data name="copyButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 30</value>
+    <value>1867, 180</value>
   </data>
   <data name="copyButton.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -176,34 +176,34 @@
     <value>True</value>
   </data>
   <data name="saveToFileButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>450, 440</value>
+    <value>6000, 2640</value>
   </data>
   <data name="saveToFileButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>40, 18, 40, 18</value>
+    <value>533, 108, 533, 108</value>
   </data>
   <data name="saveToFileButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 30</value>
+    <value>1867, 180</value>
   </data>
   <data name="saveToFileButton.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="saveToFileButton.Text" xml:space="preserve">
-    <value>保存到文件</value>
+    <value>保存</value>
   </data>
   <data name="startStopButton.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="startStopButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>650, 440</value>
+    <value>8667, 2640</value>
   </data>
   <data name="startStopButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>40, 18, 40, 18</value>
+    <value>533, 108, 533, 108</value>
   </data>
   <data name="startStopButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 30</value>
+    <value>1867, 180</value>
   </data>
   <data name="startStopButton.Text" xml:space="preserve">
-    <value>开始监听</value>
+    <value>开启监听</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>120, 120</value>
@@ -212,9 +212,9 @@
     <value>True</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>862, 493</value>
+    <value>152, 1575</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>53, 30, 53, 30</value>
+    <value>707, 180, 707, 180</value>
   </data>
 </root>

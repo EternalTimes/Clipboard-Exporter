@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Clipboard-Exporter": {
+      "commandName": "Project",
+      "hotReloadEnabled": true
+    }
+  }
+}
