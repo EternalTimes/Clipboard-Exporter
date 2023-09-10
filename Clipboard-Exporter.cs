@@ -22,6 +22,8 @@ namespace Clipboard_Exporter
         public Clipboard_Exporter()
         {
             InitializeComponent();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi; // 设置DPI缩放适配
+            this.AutoScroll = true; // 启用自动滚动以适应小屏幕
         }
 
         private void Clipboard_Exporter_Load(object sender, EventArgs e)
