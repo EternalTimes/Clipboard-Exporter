@@ -119,7 +119,11 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="clipboardHistoryTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
+    <value>7, 4</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="clipboardHistoryTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>40, 18, 40, 18</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="clipboardHistoryTextBox.Multiline" type="System.Boolean, mscorlib">
@@ -130,13 +134,16 @@
     <value>Vertical</value>
   </data>
   <data name="clipboardHistoryTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>629, 300</value>
+    <value>850, 400</value>
   </data>
   <data name="clipboardHistoryTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="clearButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 330</value>
+    <value>50, 440</value>
+  </data>
+  <data name="clearButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>40, 18, 40, 18</value>
   </data>
   <data name="clearButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 30</value>
@@ -145,7 +152,10 @@
     <value>清空</value>
   </data>
   <data name="copyButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>175, 330</value>
+    <value>250, 440</value>
+  </data>
+  <data name="copyButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>40, 18, 40, 18</value>
   </data>
   <data name="copyButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 30</value>
@@ -157,7 +167,10 @@
     <value>复制</value>
   </data>
   <data name="saveToFileButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>338, 330</value>
+    <value>450, 440</value>
+  </data>
+  <data name="saveToFileButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>40, 18, 40, 18</value>
   </data>
   <data name="saveToFileButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 30</value>
@@ -169,13 +182,13 @@
     <value>保存到文件</value>
   </data>
   <data name="startStopButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>501, 330</value>
+    <value>650, 440</value>
+  </data>
+  <data name="startStopButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>40, 18, 40, 18</value>
   </data>
   <data name="startStopButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 30</value>
-  </data>
-  <data name="startStopButton.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
   </data>
   <data name="startStopButton.Text" xml:space="preserve">
     <value>开始监听</value>
@@ -184,6 +197,9 @@
     <value>120, 120</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>654, 376</value>
+    <value>862, 493</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>53, 30, 53, 30</value>
   </data>
 </root>
