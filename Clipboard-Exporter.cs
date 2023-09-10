@@ -16,6 +16,8 @@ namespace Clipboard_Exporter
     {
         private List<string> clipboardHistory = new List<string>();
 
+        private bool isListening = false;
+
 
         public Clipboard_Exporter()
         {
@@ -25,7 +27,7 @@ namespace Clipboard_Exporter
         private void Clipboard_Exporter_Load(object sender, EventArgs e)
         {
             UpdateClipboardHistoryTextBox();
-            clipboardMonitorTimer.Start(); // 启动剪贴板监视器
+            EnableClipboardMonitoring(isListening); // 开始或停止剪贴板监听
         }
 
         private void UpdateClipboardHistoryTextBox()
@@ -56,6 +58,26 @@ namespace Clipboard_Exporter
                 {
                     File.WriteAllLines(saveFileDialog.FileName, clipboardHistory);
                 }
+            }
+        }
+
+        private void startStopButton_Click(object sender, EventArgs e)
+        {
+            isListening = !isListening; // 切换监听状态
+            EnableClipboardMonitoring(isListening);
+        }
+
+        private void EnableClipboardMonitoring(bool enable)
+        {
+            if (enable)
+            {
+                clipboardMonitorTimer.Start();
+                startStopButton.Text = "停止监听";
+            }
+            else
+            {
+                clipboardMonitorTimer.Stop();
+                startStopButton.Text = "开始监听";
             }
         }
 
