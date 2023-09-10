@@ -15,6 +15,7 @@ namespace Clipboard_Exporter
     {
         private List<string> clipboardHistory = new List<string>();
 
+
         public Clipboard_Exporter()
         {
             InitializeComponent();
@@ -23,6 +24,7 @@ namespace Clipboard_Exporter
         private void Clipboard_Exporter_Load(object sender, EventArgs e)
         {
             UpdateClipboardHistoryTextBox();
+            clipboardMonitorTimer.Start(); // 启动剪贴板监视器
         }
 
         private void UpdateClipboardHistoryTextBox()

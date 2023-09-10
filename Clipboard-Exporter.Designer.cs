@@ -69,7 +69,7 @@
             resources.ApplyResources(clipboardHistoryTextBox, "clipboardHistoryTextBox");
             clipboardHistoryTextBox.Name = "clipboardHistoryTextBox";
             clipboardHistoryTextBox.ReadOnly = true;
-            clipboardHistoryTextBox.TextChanged += textBox1_TextChanged;
+            
             // 
             // Clipboard_Exporter
             // 
