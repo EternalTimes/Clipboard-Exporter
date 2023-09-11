@@ -23,6 +23,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Properties\favicon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="favicon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Clipboard-Exporter.Designer.cs">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Compile>
