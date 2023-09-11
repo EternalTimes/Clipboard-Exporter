@@ -16,6 +16,7 @@ namespace Clipboard_Exporter
             InitializeComponent();
             ///this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None; // 设置DPI缩放适配
             ///this.AutoScroll = true; // 启用自动滚动以适应小屏幕
+            this.Icon = Properties.Resources.favicon ;
             saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Text Files|*.txt|All Files|*.*";
             saveFileDialog.DefaultExt = "txt";
