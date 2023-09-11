@@ -87,7 +87,8 @@ namespace Clipboard_Exporter
 
             if (isListening && !string.IsNullOrWhiteSpace(clipboardText) && clipboardText != lastClipboardText)
             {
-                clipboardHistory.Insert(0, clipboardText);
+                clipboardHistory.Add(clipboardText); // 使用Add方法添加到末尾
+                //clipboardHistory.Insert(0, clipboardText);
                 UpdateClipboardHistoryTextBox();
 
                 Clipboard.Clear();// 复制后清除系统剪贴板，但不清除应用程序的剪贴板历史记录
